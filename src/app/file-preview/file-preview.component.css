@@ -1,0 +1,8 @@
+.file-preview-container {
+    padding: 16px;
+  }
+  
+  .loading, .error {
+    text-align: center;
+  }
+  

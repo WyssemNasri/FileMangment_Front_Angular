@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    background-color: #1a237e;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .logo img {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+  }
+  

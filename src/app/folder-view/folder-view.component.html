@@ -1,0 +1,12 @@
+<div *ngIf="files.length > 0; else noFiles">
+  <h3>Fichiers dans le dossier</h3>
+  <ul>
+    <li *ngFor="let file of files">
+      {{ file.name }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #noFiles>
+  <p>Aucun fichier trouvé dans ce dossier.</p>
+</ng-template>

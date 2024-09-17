@@ -1,0 +1,11 @@
+<div class="file-manager-container">
+  <input type="text" placeholder="Search files by name" (input)="onSearch($event)">
+  <ul>
+    <li *ngFor="let file of filteredFiles">
+      <i class="fas fa-folder"></i> <!-- Folder icon -->
+      {{ file.name }}
+      <button class="preview-button" (click)="openPreview(file.id, file.name)">Preview</button>
+      <button class="delete-button" (click)="deleteFile(file.id)">Delete</button>
+    </li>
+  </ul>
+</div>

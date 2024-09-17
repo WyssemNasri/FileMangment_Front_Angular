@@ -1,0 +1,42 @@
+.dashboard-container {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #1a237e;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .grid-item {
+    cursor: pointer;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 20px;
+    color: white;
+  }
+  
+  .icon {
+    font-size: 50px;
+  }
+  
+  .title {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  

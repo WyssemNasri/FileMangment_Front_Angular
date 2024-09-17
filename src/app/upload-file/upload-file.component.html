@@ -1,0 +1,33 @@
+<div class="upload-file-container">
+  <img src="images/logocpg.png" alt="Logo CPG" class="logo">
+  <h2>Upload File</h2>
+
+  <!-- Folder Selection Dropdown with Floating Label -->
+  <mat-form-field appearance="fill">
+    <mat-label>Select Folder</mat-label>
+    <mat-select [(value)]="selectedFolderId">
+      <mat-option *ngFor="let folder of folders" [value]="folder.id">{{ folder.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- File Input -->
+  <input type="file" (change)="onFileSelected($event)" hidden #fileInput>
+  <button mat-raised-button color="primary" (click)="pickFile()">
+    <mat-icon>attach_file</mat-icon>
+    Select File
+  </button>
+
+  <!-- Selected File Display -->
+  <div *ngIf="fileName" class="selected-file">
+    Selected file: {{ fileName }}
+  </div>
+
+  <!-- Upload Button -->
+  <button mat-raised-button color="accent" (click)="uploadFile()" [disabled]="isUploading || !selectedFolderId">
+    <mat-icon *ngIf="isUploading" class="spinner">autorenew</mat-icon>
+    {{ isUploading ? 'Uploading...' : 'Upload File' }}
+  </button>
+
+  <!-- Progress Spinner -->
+  <mat-progress-spinner *ngIf="isUploading" mode="indeterminate"></mat-progress-spinner>
+</div>
